@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 The package defines a mechanism for specifying connected trees
@@ -29,20 +27,12 @@ defines a few macros for linguists: \enumsentence for
 enumerating sentence examples, simple tabular-based non-
 connected tree macros, and gloss macros.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -58,7 +48,6 @@ connected tree macros, and gloss macros.
 %doc %{_texmfdistdir}/doc/latex/tree-dvips/tree-dvips91.script
 %doc %{_texmfdistdir}/doc/latex/tree-dvips/tree-manual.pdf
 %doc %{_texmfdistdir}/doc/latex/tree-dvips/tree-manual.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -69,5 +58,3 @@ connected tree macros, and gloss macros.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar dvips tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
