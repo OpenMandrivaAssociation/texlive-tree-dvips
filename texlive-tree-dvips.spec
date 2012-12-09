@@ -58,3 +58,16 @@ connected tree macros, and gloss macros.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar dvips tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> .91-2
++ Revision: 757087
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> .91-1
++ Revision: 719803
+- texlive-tree-dvips
+- texlive-tree-dvips
+- texlive-tree-dvips
+
