@@ -6,7 +6,7 @@
 # catalog-version .91
 Name:		texlive-tree-dvips
 Version:	.91
-Release:	8
+Release:	9
 Summary:	Trees and other linguists' macros
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex209/contrib/trees/tree-dvips
