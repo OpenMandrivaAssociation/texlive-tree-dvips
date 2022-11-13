@@ -1,18 +1,12 @@
-# revision 21751
-# category Package
-# catalog-ctan /macros/latex209/contrib/trees/tree-dvips
-# catalog-date 2011-03-14 14:09:23 +0100
-# catalog-license lppl1
-# catalog-version .91
 Name:		texlive-tree-dvips
-Version:	.91
-Release:	11
+Version:	21751
+Release:	1
 Summary:	Trees and other linguists' macros
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex209/contrib/trees/tree-dvips
 License:	LPPL1
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tree-dvips.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tree-dvips.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tree-dvips.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tree-dvips.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ enumerating sentence examples, simple tabular-based non-
 connected tree macros, and gloss macros.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -51,23 +45,10 @@ connected tree macros, and gloss macros.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar dvips tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> .91-2
-+ Revision: 757087
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> .91-1
-+ Revision: 719803
-- texlive-tree-dvips
-- texlive-tree-dvips
-- texlive-tree-dvips
-
