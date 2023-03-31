@@ -1,6 +1,6 @@
 Name:		texlive-tree-dvips
 Version:	21751
-Release:	1
+Release:	2
 Summary:	Trees and other linguists' macros
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex209/contrib/trees/tree-dvips
