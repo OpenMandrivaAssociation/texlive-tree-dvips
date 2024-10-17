@@ -3,7 +3,7 @@ Version:	21751
 Release:	2
 Summary:	Trees and other linguists' macros
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex209/contrib/trees/tree-dvips
+URL:		https://www.ctan.org/tex-archive/macros/latex209/contrib/trees/tree-dvips
 License:	LPPL1
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tree-dvips.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tree-dvips.doc.r%{version}.tar.xz
